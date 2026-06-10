@@ -1,11 +1,10 @@
-/* --- HEADER STYLES --- */
 .site-header {
   background-color: #0d0d0d;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem 4rem;
-  border-bottom: 2px solid #8B0000; /* Vermelho sangue */
+  border-bottom: 2px solid #8B0000;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -41,9 +40,27 @@
   color: #8B0000;
 }
 
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.link-login {
+  color: #b3b3b3;
+  text-decoration: none;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+.link-login:hover {
+  color: #C5A880;
+}
+
 .btn-convite {
   background-color: transparent;
-  border: 1px solid #C5A880; /* Dourado envelhecido */
+  border: 1px solid #C5A880;
   color: #C5A880;
   padding: 0.6rem 1.5rem;
   text-decoration: none;
