@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import './style.css';
+import { Link } from 'react-router-dom';
+import './Header.css';
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -7,24 +8,25 @@ export default function Header() {
   return (
     <header className="site-header">
       <div className="logo">
-        <a href="/">O JANTAR SECRETO</a>
+        <Link to="/">O JANTAR SECRETO</Link>
       </div>
 
       {/* Menu de Navegação */}
       <nav className={`nav-menu ${menuOpen ? 'open' : ''}`}>
         <ul>
-          <li><a href="#conceito">O Conceito</a></li>
-          <li><a href="#cardapio">O Cardápio</a></li>
-          <li><a href="#regras">Regras de Conduta</a></li>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/regras">Regras</Link></li>
+          <li><Link to="/cardapios">Cardápios</Link></li>
         </ul>
       </nav>
 
-      {/* Botão de Chamada (CTA) */}
-      <div className="header-cta">
-        <a href="#convite" className="btn-convite">Solicitar Convite</a>
+      {/* Área de Ação (Cadastro + Reserva) */}
+      <div className="header-actions">
+        <Link to="/cadastro" className="link-login">Membro? Entrar</Link>
+        <Link to="/reservas" className="btn-convite">Reservar Lugar</Link>
       </div>
 
-      {/* Botão Mobile (Hambúrguer) */}
+      {/* Botão Mobile */}
       <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
         <span className="bar"></span>
         <span className="bar"></span>
