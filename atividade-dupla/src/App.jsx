@@ -12,8 +12,7 @@ function App() {
     <>
       <Header/>
       <Footer/>
-      <Home />    
-
+      <Home />
     </>
   )
 }
