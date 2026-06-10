@@ -1,0 +1,68 @@
+/* --- FOOTER STYLES --- */
+.site-footer {
+  background-color: #050505;
+  color: #666666;
+  padding: 3rem 2rem 1.5rem;
+  text-align: center;
+  border-top: 1px solid #1a1a1a;
+}
+
+.footer-quote {
+  font-family: 'Georgia', serif;
+  font-style: italic;
+  color: #8B0000;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-links a {
+  color: #444444;
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #b3b3b3;
+}
+
+.footer-bottom {
+  font-size: 0.75rem;
+  border-top: 1px solid #111;
+  padding-top: 1.5rem;
+}
+
+/* Responsividade básica para o botão hambúrguer */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #f5f5f5;
+}
+
+@media (max-width: 768px) {
+  .nav-menu, .header-cta {
+    display: none; /* Aqui você pode aplicar a lógica para abrir o menu mobile */
+  }
+  .menu-toggle {
+    display: flex;
+  }
+  .site-header {
+    padding: 1.5rem 2rem;
+  }
+}
